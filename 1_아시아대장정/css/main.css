@@ -1,0 +1,513 @@
+@charset "utf-8";
+
+body{
+    font-family: 'scdream';
+    font-size: 100%;
+    line-height: 1.5;
+    color: #000; 
+}
+
+.inner{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+#wrap{
+    min-width: 1400px;
+    overflow-x: hidden;
+}
+
+/* header */
+#header{
+    padding: 30px 0 20px;
+}
+
+#header .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header h1 img{
+    display: block;
+}
+
+#header .gnb{
+    display: flex;
+}
+
+#header .gnb > li{
+    position: relative;
+}
+
+#header .gnb > li > a{
+    display: block;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+
+#header .gnb > li > a:hover{
+    background: #151c63;
+    color: #fff;
+}
+
+/* 2차메뉴 */
+#header .gnb > li .depth2{
+    position: absolute;
+    background: #151c63;
+    z-index: 2;
+    width: 100%;
+    padding: 10px 20px 30px;
+}
+
+#header .gnb > li .depth2 a{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    display: block;
+    position: relative;
+    padding: 3px 0;    
+    transition: all 0.5s;
+}
+
+/* 화살표 */
+#header .gnb > li .depth2 li a::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 5px 8px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 2.5px);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#header .gnb > li .depth2 li:hover a{
+    padding: 3px 0 3px 15px;
+}
+
+/* 화살표 hover */
+#header .gnb > li .depth2 li:hover a::before{
+    opacity: 1;
+}
+
+/* main_visual */
+#main_visual{
+    height: 700px;
+}
+
+#main_visual .mv1{
+    background: url(../images/mv_01.jpg) no-repeat center;
+    height: 700px;
+    position: relative;
+}
+
+#main_visual .mv2{
+    background: url(../images/mv_02.jpg) no-repeat center;
+    height: 700px;
+    position: relative;
+}
+
+#main_visual .mv_txt{
+    letter-spacing: -1px;
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#main_visual .mv_txt h3{
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+}
+
+#main_visual .mv_txt h4{
+    font-size: 50px;
+    color: #fff;
+    padding: 20px 0 50px;
+    line-height: 1.2;
+}
+
+#main_visual .mv_txt h4 span{
+    color: #ff0;
+}
+
+
+#main_visual .mv_txt p{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+}
+
+#main_visual .swiper-button-prev{
+    color: #fff;
+}
+
+#main_visual .swiper-button-next{
+    color: #fff; 
+}
+
+#main_visual .swiper-pagination-bullet{
+    background: #fff;
+    border-radius: 20px;
+}
+
+/* hover됐을 시 */
+#main_visual .swiper-pagination-bullet-active{
+    width: 30px;
+}
+
+/* 메인 섹션 중에서 메인 비쥬얼을 제외한 나머지 */
+#main section:not(#main_visual) {
+    padding: 150px 0;
+}
+
+#main h2{
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+#main h2 + p{
+    font-size: 20px;
+    color: #999;
+    padding: 10px 0 50px;
+}
+
+/* intro */
+#intro h2{
+    font-weight: 400;
+    position: relative;
+}
+
+/* h2의 형광펜 */
+#intro h2::before{
+    transform: skewX(-10deg);
+    content: "";
+    display: block;
+    width: 80%;
+    height: 20px;
+    background: rgba(255,0,0,0.2);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#intro h2 span{
+    font-weight: 700;
+}
+
+#intro ul{
+    display: flex;
+    gap: 50px;
+}
+
+/* 배경이 들어가기 때문에 패딩이 많이 들어가는 것 보다 높이를 정해주는 것이 나음 */
+#intro ul li{
+    width: calc((100% - 100px) / 3);
+    padding: 40px;
+    color: #fff;
+    padding: 30px 40px;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+#intro ul li:nth-child(1){
+    background: url(../images/intro_01.jpg) no-repeat center/cover;
+}
+
+#intro ul li:nth-child(2){
+    background: url(../images/intro_02.jpg) no-repeat center/cover;
+}
+
+#intro ul li:nth-child(3){
+    background: url(../images/intro_03.jpg) no-repeat center/cover;
+}
+
+#intro ul li h3{
+    font-size: 35px;
+}
+
+#intro ul li h3 span{
+    border-bottom: 3px solid #fff;
+    font-size: 18px;
+
+}
+
+#intro ul li .over{
+    background: rgba(7,126,207,0.8);
+    padding: 40px 40px 60px;
+    position: absolute;
+    left: 0;
+    bottom: -300px;
+    transition: all 0.5s;
+}
+
+#intro ul li:hover .over{
+    bottom: 0;
+}
+
+#intro .over a{
+    display: inline-block;
+    background: #fff;
+    padding: 10px 50px;
+    margin-top: 20px;
+}
+
+
+/* docu */
+#docu{
+    background: #fafadc;
+}
+
+#docu .inner{
+    display: flex;
+    gap: 100px;
+    align-items: center; 
+}
+
+#docu .docu_movie{
+    width: 800px;
+    position: relative;
+}
+
+#docu .docu_movie img{
+    width: 100%;
+    filter: brightness(0.5);
+}
+
+#docu .docu_txt{
+    width: calc(100% - 900px);
+    word-break: keep-all;
+}
+
+#docu .docu_txt a{
+    display: inline-block;
+    background: #3a9c3f;
+    padding: 20px 50px;
+    color: #fff;
+}
+
+#docu .docu_movie .play{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url(../images/btn_play.png) no-repeat center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    font-size: 0;
+}
+
+/* popup */
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.popup .close{
+    position: absolute;
+    top: 120px;
+    right: 17.5%;
+    background: url(../images/btn_close.png) no-repeat center;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/* notice */
+#notice{
+    background: #fafadc;
+    padding: 0 !important; /* 최우선순위 */
+}
+
+#notice .inner{
+    background: #fff;
+    padding: 50px 100px 0;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#notice h2{
+    width: 200px;
+}
+
+#notice .notice_list{
+    width: calc(100% - 200px);
+}
+
+#notice .notice_list .notice{
+    height: 24px;
+}
+
+
+#notice .notice_list span{
+    float: right;
+}
+
+
+/* sns */
+#sns .sns_list{
+    margin-left: 255px;
+    padding-bottom: 30px;
+}
+
+#sns .sns_list img{
+    width: 100%;
+    display: block;
+}
+
+#sns .sns_list li{
+    position: relative;
+}
+
+#sns .sns_list li dl{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    color: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+#sns .sns_list li:hover dl{
+    opacity: 1;
+}
+
+#sns .sns_list li dl dt{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.blog{
+    background: rgb(0,192,57,0.9) url(../images/sns_blog.png) no-repeat left 40px bottom 40px;
+}
+
+.insta{
+    background: rgba(109,47,208,0.9) url(../images/sns_insta.png) no-repeat left 40px bottom 40px;
+}
+
+.facebook{
+    background: rgba(70,89,147,0.9) url(../images/sns_facebook.png) no-repeat left 40px bottom 40px;
+}
+
+#sns .swiper-scrollbar{
+    bottom: 0; /* 스와이퍼 슬라이드의 기본값이 overflow-hidden이기 때문에 스크롤바가 보이지 않는다 따라서
+    sns.list에 패딩값을 주어야 스크롤바 위치에 맞춰 보이게 한다 */
+    background: rgba(1,129,220,0.2);
+    height: 5px;
+}
+
+#sns .swiper-scrollbar-drag{
+    background: rgba(1,129,220,0.6);;
+}
+
+
+/* member */
+#member{
+    position: relative;
+    padding: 0 !important;
+}
+
+#member::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 320px;
+    background: #ebf5eb url(../images/members_bg.png) no-repeat right 20% bottom;
+    left: 0;
+    bottom: 0;
+}
+
+#member h2{
+    position: absolute;
+}
+
+#member ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#member ul li dl dt{
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: -2px;
+    padding-top: 50px;
+}
+
+#member ul li dl dd{
+    color: #999;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+#member ul li dl dd span{
+    color: #000;
+}
+
+#member ul li img{
+    display: block;
+}
+
+#member .swiper-pagination{
+    left: 300px;
+    width: auto;
+    top: 0; 
+}
+
+/* footer */
+#footer{
+    padding: 80px;
+}
+
+#footer .inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .footer_logo img:nth-child(1){
+    padding-right: 30px;
+}
+
+#footer .footer_link{
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+#footer .footer_txt{
+    margin-right: auto;
+    margin-left: 100px;
+    color: #999;
+}
+
+#footer .footer_sns{
+    display: flex;
+    gap: 15px;
+}
