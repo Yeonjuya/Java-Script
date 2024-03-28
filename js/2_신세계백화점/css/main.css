@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #000; 
+}
+
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#wrap{
+    min-width: 1200px;
+    overflow-x: hidden;
+}
+
+/* header */
+
+#header .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header h1 img{
+    display: block;
+}
+
+#header .gnb{
+    display: flex;
+    padding: 35px 0;
+}
+
+#header .gnb > li > a{
+    display: block;
+    padding: 0 40px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.4s;
+}
+
+
+#header .gnb > li > a:hover{
+    color: #ff002a;
+}
+
+#main h3{
+    font-family: "Cormorant Garamond", serif;
+    font-family: 700;
+    font-size: 60px;
+}
+
+#main h2{
+    font-family: "Gowun Batang", serif;
+}
+
+/* main_visual */
+#main_visual{
+    height: 900px;
+}
+
+#main_visual h2{
+    font-weight: 300;
+    font-size: 60px;
+    letter-spacing: -2px;
+}
+
+#main_visual h2 span{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 90px;
+    line-height: 100px;
+    font-weight: 400;
+}
+
+#main_visual .mv1{
+    background: url(../images/slide_01.jpg) no-repeat center;
+    height: 900px;
+    position: relative;
+}
+
+#main_visual .mv2{
+    background: url(../images/slide_02.jpg) no-repeat center;
+    height: 900px;
+    position: relative;
+}
+
+#main_visual .mv3{
+    background: url(../images/slide_03.jpg) no-repeat center;
+    height: 900px;
+    position: relative;
+}
+
+#main_visual .mv_txt{
+    color: #fff;
+    position: absolute;
+    left: 17%;
+    top: 21%;
+    text-align: left;
+}
+
+#main_visual .mv_txt a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 3px solid #fff;
+    padding-top: 70px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* 화살표 */
+#main_visual .swiper-button-prev{
+    color: #fff;
+}
+
+#main_visual .swiper-button-next{
+    color: #fff; 
+}
+
+#main_visual .swiper-pagination-fraction{
+    color: #fff;
+    font-size: 18px;
+}
+
+
+/* shin_now */
+#shin_now{
+    padding: 170px 150px;
+}
+
+#shin_now h3{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#shin_now ul{
+    display: flex;
+    gap: 30px;
+}
+
+#shin_now ul li{
+    width: calc((100% - 90px) / 4);
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    transform: all 0.5s;
+}
+
+#shin_now ul li:nth-child(1){
+    background: url(../images/now_list_01.jpg) no-repeat center/cover;
+    border-bottom: 3px solid #ff002a;
+}
+
+#shin_now ul li:nth-child(2){
+    background: url(../images/now_list_02.jpg) no-repeat center/cover;
+    border-bottom: 3px solid #ff002a;
+}
+
+#shin_now ul li:nth-child(3){
+    background: url(../images/now_list_03.jpg) no-repeat center/cover;
+    border-bottom: 3px solid #ff002a;
+}
+
+#shin_now ul li:nth-child(4){
+    background: url(../images/now_list_04.jpg) no-repeat center/cover;
+    border-bottom: 3px solid #ff002a;
+}
+
+#shin_now .over dl{
+    background: rgba(0,0,0,0.8);
+    padding: 50px 40px;
+    height: 250px;
+    border-top: 3px solid #ff002a;
+}
+
+#shin_now .over dl dt{
+    color: #aa8800;
+    font-weight: 700;
+}
+
+#shin_now .over dl dd{
+    color: #fff;
+    padding: 15px 0 20px;
+}
+
+#shin_now .over a{
+    color: #fff;
+    display: inline-block;    
+}
+
+
+#shin_now .over{
+    position: absolute;
+    left: 0;
+    bottom: -300px;
+    transition: all 0.5s;
+}
+
+#shin_now li:hover .over{
+    bottom: 0;
+}
+
+#shin_now .sns{
+    text-align: center;
+    padding-top: 50px;
+}
+
+#shin_now .sns h4{
+    font-size: 20px;
+}
+
+#shin_now .sns p{
+    padding: 15px 0 20px;
+    color: #999;
+}
+
+#shin_now ol{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+/* event */
+#event{
+    background: #eee;
+    padding: 170px 0 150px;
+    position: relative;
+    width: 1920px;
+    height: 950px;
+}
+
+#event img{
+    display: block;
+    width: 412px;
+}
+
+#event h3{
+    padding-bottom: 50px;
+}
+
+#event dl dt{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 13px 0 10px;
+}
+
+#event dl dd{
+    color: #999;
+}
+
+#event .slide_style{
+    position: absolute;
+    right: 0;
+    left: 18.5%;
+}
+
+/* art */
+#art{
+    padding: 170px 0 150px;
+    position: relative;
+}
+
+#art .art_list img{
+    position: absolute;
+    bottom: 100px;
+    height: 700px;
+}
+
+#art h3{
+    text-align: center;
+}
+
+#art h2{
+    font-size: 50px;
+}
